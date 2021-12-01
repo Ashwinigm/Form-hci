@@ -12,10 +12,10 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th>Phone</th>
 		<th>First Name</th>
 		<th>Last Name</th>
 		<th>Email</th>
+        <th>Phone</th>
 		<th>Address</th>
 		<th>Zip Code</th>
       </tr>
@@ -23,10 +23,10 @@
     <tbody>
 	{% for stud in object_list %}  
       <tr>
-        <td>{{stud.phone}}</td>
         <td>{{stud.first_name}}</td>
 		<td>{{stud.last_name}}</td>
 		<td>{{stud.email}}</td>
+        <td>{{stud.phone}}</td>
 		<td>{{stud.address}}</td>
 		<td>{{stud.zipcode}}</td>
       </tr>
