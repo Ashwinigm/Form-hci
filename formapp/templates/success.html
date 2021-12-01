@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Django CRUD Operations</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+</head>
+<body>
+<div class="container">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Phone</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Address</th>
+		<th>Zip Code</th>
+      </tr>
+    </thead>
+    <tbody>
+	{% for stud in object_list %}  
+      <tr>
+        <td>{{stud.phone}}</td>
+        <td>{{stud.first_name}}</td>
+		<td>{{stud.last_name}}</td>
+		<td>{{stud.email}}</td>
+		<td>{{stud.address}}</td>
+		<td>{{stud.zipcode}}</td>
+      </tr>
+	{% endfor %} 
+	</tbody>
+</table>
+<button type="button" class="btn btn-primary btn-lg"><a href='/add'>Add Student</a></button>
+<div class="btn-toolbar pull-right">
+<button type="button" class="btn btn-secondary btn-lg">Delete Student</button>
+</div>
+</div>
+</body>
+</html>
